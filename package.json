@@ -1,0 +1,47 @@
+{
+  "name": "payment-manager",
+  "version": "1.0.0",
+  "description": "A project to manage payments using Solidity and Hardhat",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.cjs --network sepolia",
+    "deploy:holesky": "hardhat run scripts/deploy.cjs --network holesky",
+    "deploy:mainnet": "hardhat run scripts/deploy.cjs --network mainnet",
+    "verify:sepolia": "hardhat verify --network sepolia",
+    "verify:holesky": "hardhat verify --network holesky",
+    "verify:mainnet": "hardhat verify --network mainnet"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-verify": "^2.0.8",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "chai": "^5.1.1",
+    "chai-as-promised": "^8.0.0",
+    "hardhat": "^2.22.6"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5",
+    "ethereum-waffle": "^4.0.10",
+    "ethers": "^5.7.2"
+  },
+  "comments": {
+    "scripts": {
+      "compile": "Compiles the Solidity contracts using Hardhat.",
+      "test": "Runs the tests using Hardhat.",
+      "deploy": "Deploys the contract to the local Hardhat network.",
+      "deploy:sepolia": "Deploys the contract to the Sepolia test network.",
+      "deploy:holesky": "Deploys the contract to the Holesky test network.",
+      "deploy:mainnet": "Deploys the contract to the Ethereum mainnet.",
+      "verify:sepolia": "Verifies the contract on Etherscan for the Sepolia test network. Usage: npm run verify:sepolia <deployed_contract_address> <constructor_arguments>",
+      "verify:holesky": "Verifies the contract on Etherscan for the Holesky test network. Usage: npm run verify:holesky <deployed_contract_address> <constructor_arguments>",
+      "verify:mainnet": "Verifies the contract on Etherscan for the Ethereum mainnet. Usage: npm run verify:mainnet <deployed_contract_address> <constructor_arguments>"
+    }
+  }
+}
